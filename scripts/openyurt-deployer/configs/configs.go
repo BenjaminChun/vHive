@@ -5,6 +5,8 @@ import (
 	"io"
 	"os"
 	"path"
+
+	utils "github.com/vhive-serverless/vHive/scripts/utils"
 )
 
 // Decode specific config files (JSON format)
@@ -31,11 +33,20 @@ func DecodeConfig(configFilePath string, configStruct interface{}) error {
 
 // Load knative config files
 func (knative *KnativeConfigStruct) LoadConfig() error {
+	var err error
+	// Check config directory
+	if len(VHive.VHiveSetupConfigPath) == 0 {
+		VHive.VHiveSetupConfigPath, err = utils.GetVHiveFilePath("configs/setup")
+		if err != nil {
+			utils.CleanEnvironment()
+			os.Exit(1)
+		}
+	}
 	// Get the (absolute) path of the config file
 	configFilePath := path.Join(VHive.VHiveSetupConfigPath, "knative.json")
 
 	// Decode json into struct
-	err := DecodeConfig(configFilePath, knative)
+	err = DecodeConfig(configFilePath, knative)
 
 	return err
 
