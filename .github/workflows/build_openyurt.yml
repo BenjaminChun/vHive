@@ -39,5 +39,5 @@ jobs:
 
     - name: Show scripts help info
       run: 
-        ./scripts/openyurt-deployer/oy_deploy
+        ./scripts/openyurt-deployer/oy_deploy help
 
