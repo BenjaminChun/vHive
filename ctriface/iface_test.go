@@ -97,7 +97,9 @@ func TestPauseSnapResume(t *testing.T) {
 
 	_, err = orch.ResumeVM(ctx, vmID)
 	require.NoError(t, err, "Failed to resume VM")
-
+	// sleep for 5 mins
+	duration := 300 * time.Second
+	time.Sleep(duration)
 	err = orch.StopSingleVM(ctx, vmID)
 	require.NoError(t, err, "Failed to stop VM")
 
