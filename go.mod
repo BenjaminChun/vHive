@@ -69,6 +69,7 @@ require (
 	gonum.org/v1/plot v0.14.0
 	google.golang.org/grpc v1.47.0
 	k8s.io/cri-api v0.25.0
+	github.com/BenjaminChun/ssh-test main
 )
 
 require (

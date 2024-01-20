@@ -23,7 +23,6 @@
 package ctriface
 
 import (
-	"github.com/vhive-serverless/vhive/devmapper"
 	"os"
 	"os/signal"
 	"path/filepath"
@@ -31,6 +30,8 @@ import (
 	"sync"
 	"syscall"
 	"time"
+
+	"github.com/vhive-serverless/vhive/devmapper"
 
 	log "github.com/sirupsen/logrus"
 
@@ -47,6 +48,7 @@ import (
 	"github.com/vhive-serverless/vhive/metrics"
 	"github.com/vhive-serverless/vhive/misc"
 
+	"github.com/BenjaminChun/ssh-test/networking"
 	_ "github.com/davecgh/go-spew/spew" //tmp
 )
 
@@ -91,7 +93,8 @@ type Orchestrator struct {
 	isMetricsMode    bool
 	netPoolSize      int
 
-	memoryManager *manager.MemoryManager
+	memoryManager  *manager.MemoryManager
+	networkManager *networking.NetworkManager
 }
 
 // NewOrchestrator Initializes a new orchestrator
