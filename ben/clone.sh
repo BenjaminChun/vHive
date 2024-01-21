@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Get the repository URLs from the command line arguments
-repo_url1="https://github.com/BenjaminChun/vHive.git"
+repo_url1="git@github.com:BenjaminChun/vHive.git"
 repo_url2="https://github.com/vhive-serverless/firecracker-containerd.git"
-branch_name="ssh-test"
+branch_name="debug"
 
 # Clone the first repository
 git clone "$repo_url1"
