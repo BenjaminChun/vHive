@@ -82,8 +82,23 @@ func TestPauseSnapResume(t *testing.T) {
 	vmID := "4"
 	revision := "myrev-4"
 
-	_, _, err := orch.StartVM(ctx, vmID, testImageName)
+	fmt.Println("before createnetwork")
+
+	err := orch.networkManager.CreateNetwork(vmID)
+
+	fmt.Println("err:%w", err)
+
+	if err != nil {
+		fmt.Errorf("creating network: %w", err)
+	}
+
+	_, _, err = orch.StartVM(ctx, vmID, testImageName)
 	require.NoError(t, err, "Failed to start VM")
+	fmt.Printf("VM available at IP: %s\n", orch.networkManager.GetConfig(vmID).GetCloneIP())
+	fmt.Println("sleeping for 5mins in startvm state")
+	// sleep for 5 mins
+	duration := 300 * time.Second
+	time.Sleep(duration)
 
 	err = orch.PauseVM(ctx, vmID)
 	require.NoError(t, err, "Failed to pause VM")

@@ -146,6 +146,7 @@ func NewOrchestrator(snapshotter, hostIface string, opts ...OrchestratorOption) 
 
 	o.devMapper = devmapper.NewDeviceMapper(o.client)
 	o.imageManager = image.NewImageManager(o.client, o.snapshotter)
+	o.networkManager = networking.NewNetworkManager()
 
 	return o
 }
