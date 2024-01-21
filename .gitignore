@@ -26,3 +26,9 @@
 # Binaries
 vhive
 setup_tool
+
+# Zip files
+*.tar.gz
+ctriface/get_helm.sh
+ctriface/protoc-3.19.4-linux-x86_64.zip
+ctriface/runc

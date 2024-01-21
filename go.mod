@@ -44,10 +44,11 @@ replace (
 )
 
 require (
+	github.com/BenjaminChun/ssh-test v0.0.0-20240119150939-69644d7e2566
 	github.com/containerd/containerd v1.6.20
 	github.com/containerd/go-cni v1.1.6
 	github.com/davecgh/go-spew v1.1.1
-	github.com/firecracker-microvm/firecracker-containerd v0.0.0-00010101000000-000000000000
+	github.com/firecracker-microvm/firecracker-containerd v0.0.0-20230718221715-2a60b1c50228
 	github.com/ftrvxmtrx/fd v0.0.0-20150925145434-c6d800382fff
 	github.com/go-multierror/multierror v1.0.2
 	github.com/golang/protobuf v1.5.2
@@ -59,8 +60,8 @@ require (
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.1
 	github.com/vhive-serverless/vhive/examples/protobuf/helloworld v0.0.0-00010101000000-000000000000
-	github.com/vishvananda/netlink v1.1.1-0.20210330154013-f5de75959ad5
-	github.com/vishvananda/netns v0.0.0-20210104183010-2eb08e3e575f
+	github.com/vishvananda/netlink v1.1.1-0.20220318152240-083e92e21eeb
+	github.com/vishvananda/netns v0.0.0-20211101163701-50045581ed74
 	github.com/wcharczuk/go-chart v2.0.1+incompatible
 	golang.org/x/net v0.19.0
 	golang.org/x/sync v0.5.0
@@ -69,7 +70,6 @@ require (
 	gonum.org/v1/plot v0.14.0
 	google.golang.org/grpc v1.47.0
 	k8s.io/cri-api v0.25.0
-	github.com/BenjaminChun/ssh-test main
 )
 
 require (
@@ -85,6 +85,7 @@ require (
 	github.com/containerd/ttrpc v1.1.2 // indirect
 	github.com/containerd/typeurl v1.0.2 // indirect
 	github.com/containernetworking/cni v1.1.2 // indirect
+	github.com/coreos/go-iptables v0.6.0 // indirect
 	github.com/docker/go-events v0.0.0-20190806004212-e31b211e4f1c // indirect
 	github.com/go-fonts/liberation v0.3.1 // indirect
 	github.com/go-latex/latex v0.0.0-20230307184459-12ec69307ad9 // indirect
@@ -101,7 +102,7 @@ require (
 	github.com/moby/sys/signal v0.7.0 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/runc v1.1.7 // indirect
-	github.com/opencontainers/runtime-spec v1.0.3-0.20210910115017-0d6cc581aeea // indirect
+	github.com/opencontainers/runtime-spec v1.0.3-0.20220311020903-6969a0a09ab1 // indirect
 	github.com/opencontainers/selinux v1.10.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
